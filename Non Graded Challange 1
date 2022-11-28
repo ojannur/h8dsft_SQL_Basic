@@ -6,10 +6,11 @@ SELECT trips.start_date,
 FROM `bigquery-public-data.san_francisco.bikeshare_trips` as trips
 JOIN `bigquery-public-data.san_francisco.bikeshare_stations` as stations
   on trips.start_station_id = stations.station_id
-WHERE trips.start_date BETWEEN '2016-01-01' AND '2016-03-31'
+WHERE trips.start_date BETWEEN '2015-12-31' AND '2016-04-01'
       AND trips.subscriber_type = 'Subscriber'
       AND stations.Landmark = 'Redwood City'
-      
+ORDER BY trips.start_date
+
 
 UNTUK Q2
 
@@ -19,6 +20,7 @@ SELECT trips.start_date,
 FROM `bigquery-public-data.san_francisco.bikeshare_trips` as trips
 JOIN `bigquery-public-data.san_francisco.bikeshare_stations` as stations
   on trips.start_station_id = stations.station_id
-WHERE trips.start_date BETWEEN '2016-04-01' AND '2016-06-30'
+WHERE trips.start_date BETWEEN '2016-04-01' AND '2016-07-01'
       AND trips.subscriber_type = 'Subscriber'
       AND stations.Landmark = 'Redwood City'
+ORDER BY trips.start_date
