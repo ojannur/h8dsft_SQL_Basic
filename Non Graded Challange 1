@@ -1,0 +1,24 @@
+UNTUK Q1
+
+SELECT trips.start_date,
+      trips.subscriber_type,
+      stations.landmark,
+FROM `bigquery-public-data.san_francisco.bikeshare_trips` as trips
+JOIN `bigquery-public-data.san_francisco.bikeshare_stations` as stations
+  on trips.start_station_id = stations.station_id
+WHERE trips.start_date BETWEEN '2016-01-01' AND '2016-03-31'
+      AND trips.subscriber_type = 'Subscriber'
+      AND stations.Landmark = 'Redwood City'
+      
+
+UNTUK Q2
+
+SELECT trips.start_date,
+      trips.subscriber_type,
+      stations.landmark,
+FROM `bigquery-public-data.san_francisco.bikeshare_trips` as trips
+JOIN `bigquery-public-data.san_francisco.bikeshare_stations` as stations
+  on trips.start_station_id = stations.station_id
+WHERE trips.start_date BETWEEN '2016-04-01' AND '2016-06-30'
+      AND trips.subscriber_type = 'Subscriber'
+      AND stations.Landmark = 'Redwood City'
