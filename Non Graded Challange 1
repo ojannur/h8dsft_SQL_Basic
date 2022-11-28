@@ -1,26 +1,20 @@
 UNTUK Q1
 
-SELECT trips.start_date,
-      trips.subscriber_type,
-      stations.landmark,
+SELECT COUNT (*) AS Total_Subs_Q1
 FROM `bigquery-public-data.san_francisco.bikeshare_trips` as trips
 JOIN `bigquery-public-data.san_francisco.bikeshare_stations` as stations
   on trips.start_station_id = stations.station_id
 WHERE trips.start_date BETWEEN '2015-12-31' AND '2016-04-01'
       AND trips.subscriber_type = 'Subscriber'
       AND stations.Landmark = 'Redwood City'
-ORDER BY trips.start_date
 
 
 UNTUK Q2
 
-SELECT trips.start_date,
-      trips.subscriber_type,
-      stations.landmark,
+SELECT COUNT (*) AS Total_Subs_Q2
 FROM `bigquery-public-data.san_francisco.bikeshare_trips` as trips
 JOIN `bigquery-public-data.san_francisco.bikeshare_stations` as stations
   on trips.start_station_id = stations.station_id
 WHERE trips.start_date BETWEEN '2016-04-01' AND '2016-07-01'
       AND trips.subscriber_type = 'Subscriber'
       AND stations.Landmark = 'Redwood City'
-ORDER BY trips.start_date
