@@ -18,3 +18,5 @@ JOIN `bigquery-public-data.san_francisco.bikeshare_stations` as stations
 WHERE trips.start_date BETWEEN '2016-04-01' AND '2016-07-01'
       AND trips.subscriber_type = 'Subscriber'
       AND stations.Landmark = 'Redwood City'
+
+test
